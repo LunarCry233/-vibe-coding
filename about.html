@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于我 · 张三</title>
+  <meta name="description" content="关于张三：个人简介、基本信息、工作经历与技能清单。">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <!-- TODO: 将“张三”等占位内容替换为真实信息 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">张三<span class="brand-dot">.</span></a>
+      <button class="nav-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="主导航">
+        <ul>
+          <li><a href="index.html" class="nav-link">主页</a></li>
+          <li><a href="about.html" class="nav-link active" aria-current="page">关于我</a></li>
+          <li><a href="portfolio.html" class="nav-link">作品集</a></li>
+          <li><a href="contact.html" class="nav-link">联系我</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="container reveal">
+        <p class="section-kicker">关于我</p>
+        <h1 class="section-title">你好，我是张三</h1>
+        <p class="section-sub">一名喜欢把想法变成产品的前端开发工程师。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container about-layout">
+        <div class="reveal">
+          <img class="about-avatar" src="assets/images/avatar.jpg" alt="张三的头像（占位）" width="400" height="400">
+        </div>
+        <div class="reveal">
+          <h2 class="section-title">个人简介</h2>
+          <p>我是一名前端开发工程师，拥有 X 年 Web 开发经验，擅长用 HTML、CSS 和 JavaScript 构建响应式、可访问、高性能的网站与 Web 应用。我相信好的产品来自对细节的坚持和对用户的理解。</p>
+          <p>工作之外，我喜欢写技术笔记、参与开源项目，也关注设计与产品领域的知识，期待做出既有用又好看的东西。</p>
+          <ul class="info-list">
+            <li class="info-item"><span class="info-label">所在地</span><span class="info-value">上海（支持远程）</span></li>
+            <li class="info-item"><span class="info-label">当前状态</span><span class="info-value">开放合作 / 求职中 <span class="badge">可约聊</span></span></li>
+            <li class="info-item"><span class="info-label">联系方式</span><span class="info-value"><a href="mailto:hello@example.com">hello@example.com</a></span></li>
+            <li class="info-item"><span class="info-label">教育经历</span><span class="info-value">某大学 · 计算机科学与技术（占位）</span></li>
+          </ul>
+          <a href="assets/files/resume.pdf" class="btn btn-primary" download>下载简历</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">经历</p>
+          <h2 class="section-title">工作与项目经历</h2>
+        </div>
+        <div class="timeline reveal">
+          <div class="timeline-item">
+            <p class="timeline-date">2024 – 至今</p>
+            <h3 class="timeline-title">某科技公司 · 前端开发工程师</h3>
+            <p class="timeline-desc">负责核心业务前端开发，推动组件库建设与性能优化落地。（占位，请替换）</p>
+          </div>
+          <div class="timeline-item">
+            <p class="timeline-date">2022 – 2024</p>
+            <h3 class="timeline-title">某互联网公司 · Web 开发</h3>
+            <p class="timeline-desc">参与多个 Web 项目的开发与迭代，负责页面还原与交互实现。（占位，请替换）</p>
+          </div>
+          <div class="timeline-item">
+            <p class="timeline-date">2021 – 2022</p>
+            <h3 class="timeline-title">自由职业 · 前端开发</h3>
+            <p class="timeline-desc">为中小团队提供网站与小程序开发服务。（占位，请替换）</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">技能</p>
+          <h2 class="section-title">技能清单</h2>
+        </div>
+        <div class="reveal">
+          <div class="skill-group">
+            <h3>前端</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML / CSS</span>
+              <span class="skill-tag">JavaScript (ES6+)</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Vue</span>
+              <span class="skill-tag">React</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>后端</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">REST API</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>工具</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Git / GitHub</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Docker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> 张三 · 保留所有权利</p>
+      <div class="footer-links">
+        <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:hello@example.com">邮箱</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

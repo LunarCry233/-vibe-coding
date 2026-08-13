@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>张三 · 个人主页</title>
+  <meta name="description" content="张三的个人网站：个人介绍、项目作品与联系方式。前端开发工程师，欢迎交流合作。">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <!-- TODO: 将“张三”等占位内容替换为真实信息 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">张三<span class="brand-dot">.</span></a>
+      <button class="nav-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="主导航">
+        <ul>
+          <li><a href="index.html" class="nav-link active" aria-current="page">主页</a></li>
+          <li><a href="about.html" class="nav-link">关于我</a></li>
+          <li><a href="portfolio.html" class="nav-link">作品集</a></li>
+          <li><a href="contact.html" class="nav-link">联系我</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container reveal">
+        <p class="hero-greeting">你好，我是</p>
+        <h1 class="hero-name">张三</h1>
+        <p class="hero-role">前端开发工程师 · 关注 Web 与移动端体验</p>
+        <p class="hero-desc">我热爱把复杂的问题变简单：用清晰的代码和克制的设计，做出好用、好看、可维护的产品。</p>
+        <div class="hero-actions">
+          <a href="portfolio.html" class="btn btn-primary">查看作品</a>
+          <a href="contact.html" class="btn btn-ghost">联系我</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 精选作品 -->
+    <section class="section" id="featured">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">精选作品</p>
+          <h2 class="section-title">近期代表作</h2>
+          <p class="section-sub">以下是我最近完成的一些项目，更多内容请见作品集页。</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card reveal">
+            <div class="card-cover">
+              <img src="assets/images/projects/project-1.jpg" alt="个人博客系统项目封面（占位）" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">个人博客系统</h3>
+              <p class="card-desc">支持 Markdown 写作、标签归档与全文搜索的轻量博客平台。</p>
+              <div class="tags">
+                <span class="tag">Vue</span><span class="tag">Node.js</span><span class="tag">MySQL</span>
+              </div>
+              <div class="card-links">
+                <a class="card-link" href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+                <a class="card-link is-muted" href="#" aria-disabled="true">预览（待补充）</a>
+              </div>
+            </div>
+          </article>
+          <article class="card reveal">
+            <div class="card-cover">
+              <img src="assets/images/projects/project-2.jpg" alt="电商小程序项目封面（占位）" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">电商小程序</h3>
+              <p class="card-desc">面向小商家的轻量电商小程序，含商品、购物车与订单管理。</p>
+              <div class="tags">
+                <span class="tag">微信小程序</span><span class="tag">云开发</span>
+              </div>
+              <div class="card-links">
+                <a class="card-link" href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+                <a class="card-link is-muted" href="#" aria-disabled="true">预览（待补充）</a>
+              </div>
+            </div>
+          </article>
+          <article class="card reveal">
+            <div class="card-cover">
+              <img src="assets/images/projects/project-3.jpg" alt="数据可视化大屏项目封面（占位）" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">数据可视化大屏</h3>
+              <p class="card-desc">面向运营团队的数据大屏，实时展示核心业务指标。</p>
+              <div class="tags">
+                <span class="tag">React</span><span class="tag">ECharts</span><span class="tag">WebSocket</span>
+              </div>
+              <div class="card-links">
+                <a class="card-link" href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+                <a class="card-link is-muted" href="#" aria-disabled="true">预览（待补充）</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="reveal" style="margin-top: 28px;">
+          <a href="portfolio.html" class="btn btn-ghost btn-sm">查看全部作品 →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- 关于我摘要 -->
+    <section class="section section-alt" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">关于我</p>
+          <h2 class="section-title">用技术解决问题的人</h2>
+          <p class="section-sub">一名前端开发工程师，喜欢从用户视角出发，把产品做得更简单、更好用。</p>
+        </div>
+        <div class="reveal">
+          <p>我拥有 X 年 Web 开发经验，专注于前端工程化与用户体验。工作之余，我喜欢折腾开源项目、写技术笔记，也乐于和不同背景的人交流想法。</p>
+          <p><span class="badge">开放合作 / 求职中</span></p>
+          <a href="about.html" class="btn btn-ghost btn-sm">了解更多 →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技能亮点 -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">技能亮点</p>
+          <h2 class="section-title">我能做什么</h2>
+        </div>
+        <div class="skills">
+          <div class="skill-item reveal">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="skill-name">前端开发</h3>
+            <p class="skill-desc">编写语义化、可维护的 HTML / CSS / JavaScript。</p>
+          </div>
+          <div class="skill-item reveal">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            </div>
+            <h3 class="skill-name">UI 还原</h3>
+            <p class="skill-desc">像素级还原设计稿，注重细节与一致性。</p>
+          </div>
+          <div class="skill-item reveal">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3 class="skill-name">性能优化</h3>
+            <p class="skill-desc">关注加载速度与核心体验指标，持续度量与改进。</p>
+          </div>
+          <div class="skill-item reveal">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+            <h3 class="skill-name">移动端适配</h3>
+            <p class="skill-desc">移动优先的响应式开发，覆盖主流设备。</p>
+          </div>
+          <div class="skill-item reveal">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="skill-name">团队协作</h3>
+            <p class="skill-desc">清晰的代码评审、文档与沟通习惯。</p>
+          </div>
+          <div class="skill-item reveal">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+            </div>
+            <h3 class="skill-name">工程化</h3>
+            <p class="skill-desc">Git 工作流、自动化与持续部署经验。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> 张三 · 保留所有权利</p>
+      <div class="footer-links">
+        <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:hello@example.com">邮箱</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
