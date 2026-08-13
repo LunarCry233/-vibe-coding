@@ -1,75 +1,91 @@
-﻿# 个人网站
+﻿# 个人网站（新能源材料与器件 · 学生模板）
 
-一个纯 HTML / CSS / JS 的个人网站，包含主页、关于我、作品集、联系我四个页面。设计风格：简洁、专业、深蓝强调色，移动端适配。默认部署平台：**Vercel**。
+一个纯 HTML / CSS / JS 的静态个人网站，包含主页、关于我、作品集、联系我四个页面。设计风格：简洁、专业、深蓝强调色，移动端适配。部署平台：**Vercel**（GitHub 导入，自动部署）。
+
+**站点定位**：广东工业大学（GDUT）材料与能源学院 · 新能源材料与器件专业大二学生。内容围绕学习成长、软件技能、竞赛规划与深圳大学新材料半导体方向升学目标展开。
+
+**当前版本**：v0.2 —— 新能源材料与器件学生模板（GitHub 对应标签 / Release：`v0.2`）
 
 ## 项目结构
 
 ```
-├── index.html            # 主页
-├── about.html            # 关于我
-├── portfolio.html        # 作品集
-├── contact.html          # 联系我（含 Formspree 表单）
+├── index.html            # 主页（Hero、近期目标、简介、技能亮点）
+├── about.html            # 关于我（简介、院校信息、成长路线、技能清单）
+├── portfolio.html        # 作品集（当前为学习/竞赛规划，有真实作品后替换为作品卡片）
+├── contact.html          # 联系我（邮箱、Formspree 表单、社交链接）
 ├── 404.html              # 404 页面
 ├── css/style.css         # 全局样式（CSS 变量 + 响应式）
 ├── js/main.js            # 移动端导航、平滑滚动、滚动渐入、表单提交
 ├── favicon.svg           # 站点图标
 └── assets/
-    ├── images/
-    │   ├── avatar.jpg    # 头像（占位，请替换）
-    │   └── projects/     # 作品封面（占位，请替换）
     └── files/
-        └── resume.pdf    # 简历（占位，请替换）
+        └── resume.pdf    # 简历（占位，待替换）
 ```
+
+> 注：`assets/images/` 目前未被页面引用（头像已按需移除；有真实作品后可在 `portfolio.html` 中添加封面图）。`内容清单.md` 是本地工作文档（已 gitignore，不上传、不部署）。
 
 ## 本地预览
 
-在项目根目录启动静态服务器：
-
 ```bash
-# 方式一：Python
-python -m http.server 8080
+python -m http.server 8080     # 在项目根目录执行
 # 浏览器打开 http://localhost:8080
-
-# 方式二：VS Code 安装 Live Server 扩展后，右键 index.html 选择 Open with Live Server
 ```
 
-## 替换占位内容
+## 剩余待补充内容
 
-发布前需要把以下占位内容替换为真实信息（HTML 文件中已用 `TODO` 注释标注）：
+大部分模板内容已按学生情况填好，还剩：
 
-1. **姓名与简介**：全局搜索「张三」，替换为你的名字；更新主页 Hero 与简介文案。
-2. **头像**：用你的照片替换 `assets/images/avatar.jpg`（建议 1:1 正方形，400px 以上）。
-3. **作品**：在 `portfolio.html`（及 `index.html` 精选区）中，替换项目封面图、名称、简介、技术标签，并把 GitHub / 预览链接换成真实地址。新增作品时复制一个 `<article class="card">` 即可。
-4. **联系方式**：在 `contact.html` 和所有页面的页脚中，把 `hello@example.com`、`github.com/yourname`、微信 ID 替换为真实信息。
-5. **简历**：用真实简历替换 `assets/files/resume.pdf`。
-6. **经历与技能**：在 `about.html` 中替换时间线、技能清单。
+1. **真实姓名**：全站目前用「张三」占位（`TODO` 注释标注）。
+2. **微信**（可选）：`contact.html` 中当前为「待补充」。
+3. **Formspree 表单 ID**：见下方「联系表单配置」。
+4. **简历**：替换 `assets/files/resume.pdf`。
 
 ## 联系表单配置（Formspree）
 
-表单使用 **Formspree**（免费，适配任何静态托管平台），需要两步配置：
+静态网站没有后端，表单提交需要第三方服务转发到邮箱。表单使用 **Formspree**（免费，每月 50 条）：
 
 1. 注册 [formspree.io](https://formspree.io)，新建一个表单，拿到形如 `https://formspree.io/f/abcdwxyz` 的地址。
-2. 打开 `contact.html`，把表单 `action` 中的 `YOUR_FORM_ID` 替换为真实 ID（文件内有 `TODO` 注释提示）。
+2. 打开 `contact.html`，把表单 `action` 中的 `YOUR_FORM_ID` 替换为真实 ID。
 
-配置完成后，访客提交留言会直接发送到你的邮箱。表单默认通过 AJAX 提交，不跳转页面，成功/失败都有提示。
+配置完成后，访客提交留言会发送到你的邮箱；表单通过 AJAX 提交，不跳转页面，成功/失败有提示。若不需要留言表单，可删除表单、只保留邮箱链接。
 
-## 部署到 Vercel（推荐，二选一）
+## 版本迭代工作流
 
-### 方式 A：GitHub → Vercel 自动部署（推荐，无需本地 Node）
+### 本地 git（推荐习惯）
 
-1. 在 GitHub 新建一个公开/私有仓库（如 `personal-website`），把本项目推送上去。
-2. 登录 [vercel.com](https://vercel.com)，点击 **Add New → Project**，选择 **Import** 刚推送的 GitHub 仓库。
-3. Framework Preset 保持默认 **Other** 即可（纯静态站，无构建命令）。
-4. 点击 **Deploy**，约 1 分钟即可上线，Vercel 自动配置 HTTPS 域名。
-5. 之后每次 `git push`，Vercel 自动重新部署。
-
-### 方式 B：Vercel CLI（需要 Node.js）
+- **main = 稳定可部署版**，改动先开功能分支，完成后再合并回 main 并打 tag：
 
 ```bash
-npm install -g vercel
-vercel login          # 浏览器登录一次
-vercel --prod         # 在项目根目录执行，首次会询问项目名称等，一路回车即可
+git switch -c feature/v0.3-主题   # 1. 开分支
+# …改文件…
+git add .
+git commit -m "v0.3: 说明"
+git switch main                    # 2. 回 main
+git merge --no-ff feature/v0.3-主题 # 3. 合并（保留合并记录）
+git tag v0.3                       # 4. 打版本标签
+git branch -d feature/v0.3-主题     # 5. 清理分支
 ```
+
+- 查看/回退：`git log --oneline`、`git revert <commit>`。
+
+### GitHub 网页操作（当前上传方式）
+
+1. **开分支**：仓库页左上角分支下拉框 → 输入新分支名 → Create branch。
+2. **传文件**：确认下拉框选中新分支 → Add file → Upload files → Commit。
+3. **发 PR**：顶部黄条 **Compare & pull request** → Create pull request。
+4. **合并**：PR 页 **Merge pull request**（选 Create a merge commit，对应本地 `--no-ff`）→ Delete branch。
+5. **打标签**：仓库右侧 **Releases → Draft a new release** → 输入 tag（如 v0.3）→ Publish release。
+
+### Vercel 联动
+
+- 上传/推送到 **main** → Vercel 自动**正式部署**（production）。
+- 往**分支**上传或发 PR → Vercel 自动生成**预览地址**（在 PR 页查看），可先看效果再合并上线。
+
+## 部署到 Vercel
+
+1. 项目已在 [vercel.com](https://vercel.com) 导入 GitHub 仓库 `LunarCry233/-vibe-coding`。
+2. 之后更新：把改动的 HTML/CSS/JS 上传到 GitHub 仓库（main 或按上文流程走分支+PR），Vercel 自动重新部署。
+3. 如需 `git push` 直接部署，可配置 SSH 走 443 端口（`ssh.github.com:443`，绕过本机对 github.com 的封锁）。
 
 ## 测试清单（上线前）
 
@@ -78,6 +94,20 @@ vercel --prod         # 在项目根目录执行，首次会询问项目名称�
 - [ ] 桌面宽度（1440px）下排版正常，卡片 hover 效果正常
 - [ ] 联系表单配置后能提交成功并收到邮件
 - [ ] 页面标题与 favicon 正确显示
+
+## 更新日志
+
+### v0.2 — 新能源材料与器件学生模板（2026-08）
+- 重构内容定位为新能源材料与器件专业大二学生（广东工业大学材料与能源学院）
+- 新增升学目标：深圳大学新材料半导体方向
+- 新增技能清单（MATLAB、SolidWorks、AutoCAD、Origin、Office、VS Code、Codex、LaTeX）与竞赛规划（数模 / 国才杯 / 蓝桥杯）
+- 作品集改为「规划 + 未来作品」形态
+- 更新联系方式；移除头像显示
+- 待补充：真实姓名、Formspree 表单、简历 PDF
+
+### v0.1 — 初始版本（2026-08）
+- 搭建四页面 + 404 静态站骨架（主页 / 关于我 / 作品集 / 联系我）
+- 建立全局样式、响应式布局与移动端导航
 
 ## 技术说明
 
